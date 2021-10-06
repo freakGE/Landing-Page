@@ -10,6 +10,28 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 580px) {
+  .wrapper .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .wrapper .sign-up-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 2em;
+  }
+  .wrapper .big-boy img {
+    width: 15em;
+    height: 15em;
+  }
+}
+
 .stage-one {
   color: #f9faf8;
   background-color: #1f2937;
@@ -150,6 +172,10 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.sign-container .signuper {
+  margin-bottom: 15px;
 }
 
 .sign-item {

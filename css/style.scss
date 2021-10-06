@@ -10,7 +10,7 @@ $info-header-color: #1f2937;
 $quote-background-color: #e5e7eb;
 $qute-text-color: #1f2937;
 //
-
+// minimum-width  580px test..
 body {
   margin: 0;
   padding: 0;
@@ -21,6 +21,23 @@ body {
   padding: 0em 3em 0em 3em;
   max-width: 70em;
   margin: 0 auto;
+
+  @media screen and (max-width: 580px) {
+    .header-container {
+      flex-flow: column wrap;
+    }
+    .sign-up-item {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2em;
+    }
+    .big-boy {
+      img {
+        width: 15em;
+        height: 15em;
+      }
+    }
+  }
 }
 /////////////////////////
 .stage-one {
@@ -133,6 +150,9 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .signuper {
+    margin-bottom: 15px;
   }
 }
 .sign-item {
