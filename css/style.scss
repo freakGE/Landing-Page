@@ -77,9 +77,11 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
     .info-item {
-      margin: 4em;
+      margin: 0;
+      // background-color: red;
+      padding: 4em;
     }
   }
 }
