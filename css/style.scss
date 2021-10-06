@@ -1,0 +1,266 @@
+// colors
+$background-color-dark: #1f2937;
+$header-logo-text: #f9faf8;
+$main-text: #f9faf8;
+$secondary-text: #e5e7eb;
+//
+$background-color-action: #3882f6;
+$button-color: #3882f6;
+$info-header-color: #1f2937;
+$quote-background-color: #e5e7eb;
+$qute-text-color: #1f2937;
+//
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.wrapper {
+  padding: 0em 3em 0em 3em;
+  max-width: 70em;
+  margin: 0 auto;
+}
+/////////////////////////
+.stage-one {
+  color: $header-logo-text;
+  background-color: $background-color-dark;
+  padding-top: 0em;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-around;
+  //   align-items: space-around;
+}
+.head {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+#logo {
+  //   order: 0;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #f9faf8;
+  img {
+    // border-radius: 8px;
+    // max-width: 100%;
+    width: 1em;
+    height: 1em;
+    object-fit: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  //   background-color: rgb(194, 70, 70);
+}
+#logo:hover {
+  color: $background-color-action;
+  transition: 250ms linear;
+}
+.header-container {
+  //   background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  //   align-items: baseline;
+}
+ul {
+  width: fit-content;
+  list-style-type: none;
+}
+li {
+  margin: 5px;
+}
+.first-impression {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3.5em;
+  padding-bottom: 5em;
+  //   background-color: black;
+  .container {
+    // background-color: red;
+    .item {
+      flex: 1 1 50%;
+      //   .sign-up-item {
+      //     flex: 1 1 50%;
+      //     //   background-color: rgb(224, 107, 107);
+      //     display: flex;
+      //     justify-content: center;
+      //     align-items: center;
+      //     .signuper {
+      //       padding-bottom: 1em;
+      //     }
+      //   }
+      //   background-color: rgb(211, 79, 79);
+    }
+  }
+  .cont-image {
+    flex: 1 1 auto;
+    // background-color: blue;
+  }
+}
+
+.big-boy {
+  //   padding-top: 1em;
+  text-align: center;
+  img {
+    border-radius: 8px;
+    // max-width: 100%;
+    width: 30em;
+    height: 18em;
+    object-fit: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.sign-container {
+  color: $quote-background-color;
+  margin: 6.5em 0em 5em 0em;
+  padding: 3em 5em;
+  background-color: $background-color-action;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 15px;
+  .sign-up-item {
+    flex: 1 1 50%;
+    //   background-color: rgb(224, 107, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sign-item {
+  flex: 1 1 50%;
+}
+
+.button-border-reverse {
+  border: 2px solid $secondary-text;
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+}
+.button-border-reverse:hover {
+  background-color: $secondary-text;
+}
+////////////////////////
+.stage-two {
+  //   padding-top: 2em;
+  background-color: white;
+}
+h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  color: $info-header-color;
+}
+.info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 1em;
+  padding-bottom: 4em;
+}
+.info-item {
+  text-align: center;
+  width: 12em;
+  img {
+    border-radius: 15px;
+    border: 3px solid $background-color-action;
+    width: 12em;
+    height: 14em;
+  }
+}
+.quote-container {
+  background-color: $secondary-text;
+
+  //   margin: 0 auto;
+}
+.quote-cont {
+  padding-top: 4em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  //   align-items: baseline;
+}
+.quote-item {
+  order: 0;
+  //   background-color: crimson;
+}
+.author {
+  align-self: flex-end;
+  margin-left: 0 auto;
+  //   margin-left: 1em;
+  order: 0;
+  h3 {
+    text-align: center;
+    // font-size: 36px;
+    font-weight: bolder;
+    color: $info-header-color;
+  }
+}
+em {
+  font-size: 36px;
+  font-weight: lighter;
+  color: $background-color-dark;
+}
+
+///////////////////////
+.stage-three {
+  color: $secondary-text;
+  background-color: $background-color-dark;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    color: $header-logo-text;
+    text-transform: uppercase;
+  }
+  a:hover {
+    color: $button-color;
+    transition: 250ms linear;
+  }
+}
+
+///
+h1 {
+  //   font: normal normal bolder 48px $header-logo-text;
+  font-size: 48px;
+  font-weight: bolder;
+  color: $header-logo-text;
+}
+
+button {
+  color: $secondary-text;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0px;
+  text-transform: uppercase;
+  //   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20%;
+}
+button:hover {
+  transition: 250ms linear;
+
+  color: $background-color-action;
+}
+.button-border {
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+  background-color: $background-color-action;
+}
+.button-border:hover {
+  transition: 250ms linear;
+
+  background-color: $quote-background-color;
+  color: $background-color-action;
+}
