@@ -10,39 +10,6 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1095px) {
-  .wrapper .first-impression {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .wrapper .sign-up-item {
-    text-align: center;
-    padding-bottom: 2em;
-  }
-}
-
-@media screen and (max-width: 1005px) {
-  .wrapper .info-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .wrapper .info-container .info-item {
-    margin: 4em;
-  }
-}
-
 @media screen and (max-width: 580px) {
   .wrapper .header-container {
     -webkit-box-orient: vertical;
@@ -63,10 +30,43 @@ body {
     width: 15em;
     height: 15em;
   }
-  .wrapper .info-container {
+}
+
+@media screen and (max-width: 1095px) {
+  .first-impression {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sign-up-item {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 1005px) {
+  .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .info-container .info-item {
+    margin: 4em;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .sign-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
@@ -78,13 +78,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .wrapper .sign-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-  }
-  .wrapper .sign-container .sign-up-item {
+  .sign-container .sign-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -94,12 +88,35 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 1px;
   }
-  .wrapper .sign-container .sign-up-item button {
+  .sign-container .sign-up-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 0;
     margin: 0;
   }
-  .wrapper .sign-container .sign-up-item .signuper {
-    margin: 0px;
+  .sign-container .sign-up-item .signuper {
+    padding: 0em;
+    margin-top: 0;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-left: 0em;
+    padding-left: 0em;
+    margin-bottom: 0px;
   }
 }
 
@@ -246,21 +263,26 @@ li {
 }
 
 .sign-container .sign-up-item {
+  padding-top: 2.5vh;
+  margin: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .sign-container .signuper {
+  padding: 2em;
+  margin-left: 0em;
+  padding-left: 3em;
   margin-bottom: 15px;
 }
 
@@ -268,6 +290,27 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.sign-item .speech {
+  margin: 0;
+}
+
+.sign-item .signer {
+  margin: 0;
 }
 
 .button-border-reverse {

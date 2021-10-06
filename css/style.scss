@@ -21,32 +21,6 @@ body {
   padding: 0em 3em 0em 3em;
   max-width: 70em;
   margin: 0 auto;
-
-  @media screen and (max-width: 1095px) {
-    .first-impression {
-      display: flex;
-      justify-content: center;
-      // background-color: red;
-    }
-    .cont-image {
-      // justify-content: center;
-    }
-    .sign-up-item {
-      text-align: center;
-      padding-bottom: 2em;
-    }
-  }
-  @media screen and (max-width: 1005px) {
-    .info-container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      // align-items: center;
-      .info-item {
-        margin: 4em;
-      }
-    }
-  }
   @media screen and (max-width: 580px) {
     .header-container {
       flex-flow: column wrap;
@@ -62,28 +36,95 @@ body {
         height: 15em;
       }
     }
-    .info-container {
+    // .info-container {
+    //   display: flex;
+    //   flex-flow: column wrap;
+    //   justify-content: center;
+    //   align-items: center;
+    // }
+    // .sign-container {
+    //   flex-flow: column wrap;
+    //   .sign-up-item {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     button {
+    //       margin: 0;
+    //     }
+    //     .signuper {
+    //       margin: 0px;
+    //     }
+    //   }
+    // }
+  }
+}
+@media screen and (max-width: 1095px) {
+  .first-impression {
+    display: flex;
+    justify-content: center;
+    // background-color: red;
+  }
+  .cont-image {
+    // justify-content: center;
+  }
+  .sign-up-item {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
+@media screen and (max-width: 1005px) {
+  .info-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    // align-items: center;
+    .info-item {
+      margin: 4em;
+    }
+  }
+}
+@media screen and (max-width: 625px) {
+  .sign-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    .sign-item {
       display: flex;
-      flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+      padding: 1px;
     }
-    .sign-container {
-      flex-flow: column wrap;
-      .sign-up-item {
+    .sign-up-item {
+      // background-color: red;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 0;
+      margin: 0;
+      .signuper {
+        // background-color: green;
+        // padding-top: 2em 0 0 0;
+        // border-top: 2px solid $main-text;
+        // border-left: none;
+        padding: 0em;
+        margin-top: 0;
+        margin-right: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
-        button {
-          margin: 0;
-        }
-        .signuper {
-          margin: 0px;
-        }
+        align-content: center;
+        // background-color: greenyellow;
+        //@at-root
+        // padding: 2em;
+        margin-left: 0em;
+        padding-left: 0em;
+        margin-bottom: 0px;
       }
     }
   }
 }
+
+// @media screen and (max-width: 406px) {
+// }
 /////////////////////////
 .stage-one {
   color: $header-logo-text;
@@ -205,20 +246,37 @@ li {
   flex-flow: row wrap;
   border-radius: 15px;
   .sign-up-item {
+    padding-top: 2.5vh;
+    margin: 0;
     // background-color: rgb(10, 81, 94);
     flex: 1 1 50%;
     //   background-color: rgb(224, 107, 107);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   .signuper {
+    // padding: 2em; //mainc..
+    padding: 2em;
+    margin-left: 0em;
+    // border-left: 2px solid $main-text;
+    padding-left: 3em;
     margin-bottom: 15px;
   }
 }
 .sign-item {
   flex: 1 1 50%;
   // background-color: rgb(212, 79, 79);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+  .speech {
+    margin: 0;
+  }
+  .signer {
+    margin: 0;
+  }
 }
 
 .button-border-reverse {
