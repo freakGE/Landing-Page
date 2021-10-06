@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1095px) {
   .wrapper .first-impression {
     display: -webkit-box;
     display: -ms-flexbox;
