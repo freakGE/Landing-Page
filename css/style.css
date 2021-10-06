@@ -10,6 +10,21 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1079px) {
+  .wrapper .first-impression {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper .sign-up-item {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
+
 @media screen and (max-width: 580px) {
   .wrapper .header-container {
     -webkit-box-orient: vertical;
