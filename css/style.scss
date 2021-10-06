@@ -9,7 +9,7 @@ $button-color: #3882f6;
 $info-header-color: #1f2937;
 $quote-background-color: #e5e7eb;
 $qute-text-color: #1f2937;
-//
+// medium-width 1095px test..
 // minimum-width  580px test..
 body {
   margin: 0;
@@ -36,6 +36,17 @@ body {
       padding-bottom: 2em;
     }
   }
+  @media screen and (max-width: 1005px) {
+    .info-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      // align-items: center;
+      .info-item {
+        margin: 4em;
+      }
+    }
+  }
   @media screen and (max-width: 580px) {
     .header-container {
       flex-flow: column wrap;
@@ -49,6 +60,26 @@ body {
       img {
         width: 15em;
         height: 15em;
+      }
+    }
+    .info-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .sign-container {
+      flex-flow: column wrap;
+      .sign-up-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          margin: 0;
+        }
+        .signuper {
+          margin: 0px;
+        }
       }
     }
   }
@@ -174,6 +205,7 @@ li {
   flex-flow: row wrap;
   border-radius: 15px;
   .sign-up-item {
+    // background-color: rgb(10, 81, 94);
     flex: 1 1 50%;
     //   background-color: rgb(224, 107, 107);
     display: flex;
@@ -186,6 +218,7 @@ li {
 }
 .sign-item {
   flex: 1 1 50%;
+  // background-color: rgb(212, 79, 79);
 }
 
 .button-border-reverse {
@@ -215,6 +248,7 @@ h2 {
   padding-bottom: 4em;
 }
 .info-item {
+  margin: 1em;
   text-align: center;
   width: 12em;
   img {
