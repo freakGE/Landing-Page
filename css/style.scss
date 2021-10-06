@@ -63,6 +63,21 @@ body {
   font-size: 24px;
   font-weight: bolder;
   color: #f9faf8;
+  button {
+    font-size: 24px;
+    font-weight: bolder;
+    color: $header-logo-text;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    transition: 250ms linear;
+    color: $background-color-action;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    //
+  }
   img {
     // border-radius: 8px;
     // max-width: 100%;
