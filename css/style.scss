@@ -212,6 +212,20 @@ body {
     }
   }
 }
+@media screen and (max-width: 520px) {
+  .wrap-sign {
+    .sign-container {
+      padding: 3em 0;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .wrap-sign {
+    .sign-container {
+      padding: 3em 2em;
+    }
+  }
+}
 /////////////////////////
 .stage-one {
   color: $header-logo-text;
