@@ -4,6 +4,52 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.hamburger {
+  display: none;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .wrapper {
   padding: 0em 3em 0em 3em;
   max-width: 70em;
@@ -11,11 +57,51 @@ body {
 }
 
 @media screen and (max-width: 580px) {
+  .wrapper .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .wrapper .hamburger {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    right: 2rem;
+  }
+  .wrapper .hamburger.window {
+    position: absolute;
+    right: 2rem;
+  }
   .wrapper .header-container {
+    margin-top: 0rem;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+  }
+  .wrapper .header-container.show {
+    border-right: 1px solid #e5e7eb;
+    padding-right: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    margin-right: 2rem;
+    margin-top: 1rem;
   }
   .wrapper .sign-up-item {
     display: -webkit-box;
@@ -24,7 +110,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 2em;
   }
   .wrapper .big-boy img {
     width: 15em;
@@ -44,6 +129,9 @@ body {
   .sign-up-item {
     text-align: center;
     padding-bottom: 2em;
+  }
+  .wrap-sign .sign-up-item {
+    padding-bottom: 0;
   }
 }
 
@@ -70,7 +158,7 @@ body {
 }
 
 @media screen and (max-width: 625px) {
-  .sign-container {
+  .wrap-sign .sign-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
@@ -81,8 +169,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
-  .sign-container .sign-item {
+  .wrap-sign .sign-container .sign-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -93,34 +183,24 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 1px;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-left: 0;
+    padding-bottom: 1rem;
   }
-  .sign-container .sign-up-item {
+  .wrap-sign .sign-container .sign-up-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    padding: 0;
+    padding-top: 2rem;
+    padding-left: 0;
     margin: 0;
   }
-  .sign-container .sign-up-item .signuper {
-    padding: 0em;
-    margin-top: 0;
-    margin-right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    margin-left: 0em;
-    padding-left: 0em;
-    margin-bottom: 0px;
+  .wrap-sign .sign-container .sign-up-item .signuper {
+    padding-left: 0;
   }
 }
 
@@ -261,13 +341,13 @@ li {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-radius: 15px;
+  height: 100%;
 }
 
 .sign-container .sign-up-item {
-  padding-top: 2.5vh;
   margin: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -275,19 +355,24 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .sign-container .signuper {
-  padding: 2em;
   margin-left: 0em;
   padding-left: 3em;
-  margin-bottom: 15px;
+  padding-top: 0;
 }
 
 .sign-item {
@@ -307,6 +392,8 @@ li {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border-right: 1px solid #e5e7eb;
+  padding-right: 3em;
 }
 
 .sign-item .speech {
@@ -440,6 +527,7 @@ h1 {
 }
 
 button {
+  cursor: pointer;
   color: #e5e7eb;
   font-size: 18px;
   font-weight: bold;

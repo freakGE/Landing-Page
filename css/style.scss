@@ -17,45 +17,128 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+.hamburger {
+  display: none;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .wrapper {
   padding: 0em 3em 0em 3em;
   max-width: 70em;
   margin: 0 auto;
+  // @media screen and (max-width: 580px) {
+  //   .header-container {
+  //     flex-flow: column wrap;
+  //   }
+  //   .sign-up-item {
+  //     display: flex;
+  //     justify-content: center;
+  //     padding-bottom: 2em;
+  //   }
+  //   .big-boy {
+  //     img {
+  //       width: 15em;
+  //       height: 15em;
+  //     }
+  //   }
+  // }
   @media screen and (max-width: 580px) {
+    .mobile {
+      // background-color: red;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      //
+    }
+    .hamburger {
+      font-size: 1.5rem;
+      display: block;
+      margin-top: 1rem;
+      margin-left: auto;
+      right: 2rem;
+    }
+    #hamburger {
+      // background-color: rosybrown;
+    }
+    .hamburger.window {
+      // background-color: red;
+      position: absolute;
+      right: 2rem;
+    }
     .header-container {
+      margin-top: 0rem;
+      display: none;
       flex-flow: column wrap;
+    }
+    .header-container.show {
+      border-right: 1px solid $quote-background-color;
+      padding-right: 0.5rem;
+      display: flex;
+      //
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      //
+      //
+      margin-right: 2rem;
+      margin-top: 1rem;
+      // position: relative;
     }
     .sign-up-item {
       display: flex;
       justify-content: center;
-      padding-bottom: 2em;
+      // padding-bottom: 2em;
     }
+
     .big-boy {
       img {
         width: 15em;
         height: 15em;
       }
     }
-    // .info-container {
-    //   display: flex;
-    //   flex-flow: column wrap;
-    //   justify-content: center;
-    //   align-items: center;
-    // }
-    // .sign-container {
-    //   flex-flow: column wrap;
-    //   .sign-up-item {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     button {
-    //       margin: 0;
-    //     }
-    //     .signuper {
-    //       margin: 0px;
-    //     }
-    //   }
-    // }
   }
 }
 @media screen and (max-width: 1095px) {
@@ -70,6 +153,11 @@ body {
   .sign-up-item {
     text-align: center;
     padding-bottom: 2em;
+  }
+  .wrap-sign {
+    .sign-up-item {
+      padding-bottom: 0;
+    }
   }
 }
 @media screen and (max-width: 1005px) {
@@ -86,47 +174,44 @@ body {
   }
 }
 @media screen and (max-width: 625px) {
-  .sign-container {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    .sign-item {
-      display: flex;
+  .wrap-sign {
+    // background-color: blue;
+    // width: 50vh;
+    .sign-container {
+      // padding-bottom: 25rem;
+      flex-flow: column wrap;
       justify-content: center;
       align-items: center;
-      padding: 1px;
-    }
-    .sign-up-item {
-      // background-color: red;
-      display: flex;
-      justify-content: center;
       align-content: center;
-      padding: 0;
-      margin: 0;
-      .signuper {
-        // background-color: green;
-        // padding-top: 2em 0 0 0;
-        // border-top: 2px solid $main-text;
-        // border-left: none;
-        padding: 0em;
-        margin-top: 0;
-        margin-right: 0;
+      .sign-item {
         display: flex;
         justify-content: center;
-        align-content: center;
-        // background-color: greenyellow;
-        //@at-root
-        // padding: 2em;
-        margin-left: 0em;
-        padding-left: 0em;
-        margin-bottom: 0px;
+        align-items: center;
+        padding: 1px;
+        // 23.10.21
+        border-right: 0;
+        border-bottom: 1px solid $quote-background-color;
+        padding-left: 0;
+        padding-bottom: 1rem;
+        //
+      }
+      .sign-up-item {
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        // padding: 0;
+        padding-top: 2rem;
+        padding-left: 0;
+        // padding-right: 6vh;
+        // text-align: center;
+        margin: 0;
+        .signuper {
+          padding-left: 0;
+        }
       }
     }
   }
 }
-
-// @media screen and (max-width: 406px) {
-// }
 /////////////////////////
 .stage-one {
   color: $header-logo-text;
@@ -245,25 +330,34 @@ li {
   padding: 3em 5em;
   background-color: $background-color-action;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   border-radius: 15px;
+  height: 100%;
   .sign-up-item {
-    padding-top: 2.5vh;
+    // background-color: purple; // dl
+    // padding-top: 2.5vh;
     margin: 0;
     // background-color: rgb(10, 81, 94);
     flex: 1 1 50%;
     //   background-color: rgb(224, 107, 107);
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
     display: flex;
+    flex-flow: row wrap;
     justify-content: flex-start;
+    align-content: center;
     align-items: center;
   }
   .signuper {
+    // background-color: red;
     // padding: 2em; //mainc..
-    padding: 2em;
+    // padding: 2em;
     margin-left: 0em;
     // border-left: 2px solid $main-text;
     padding-left: 3em;
-    margin-bottom: 15px;
+    padding-top: 0;
+    // margin-bottom: 15px;
   }
 }
 .sign-item {
@@ -273,6 +367,9 @@ li {
   flex-flow: column wrap;
   justify-content: center;
   align-items: flex-end;
+  border-right: 1px solid $quote-background-color;
+  padding-right: 3em;
+  // background-color: red; //dl
   .speech {
     margin: 0;
   }
@@ -382,6 +479,7 @@ h1 {
 }
 
 button {
+  cursor: pointer;
   color: $secondary-text;
   font-size: 18px;
   font-weight: bold;
