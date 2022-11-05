@@ -419,14 +419,26 @@ h2 {
   padding-bottom: 4em;
 }
 .info-item {
-  margin: 1em;
-  text-align: center;
+  margin: 1rem;
+  // text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
   width: 12em;
   img {
     border-radius: 15px;
     border: 3px solid $background-color-action;
-    width: 12em;
-    height: 14em;
+    min-width: 12em;
+    max-width: 12em;
+    max-height: 14em;
+    min-height: 14em;
+
+    background-color: $quote-background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .quote-container {
