@@ -1,2 +1,3 @@
 # Live
-https://freakge.github.io/Landing-Page/
+
+## Check on [**Live**](https://freakge.github.io/Landing-Page/)
